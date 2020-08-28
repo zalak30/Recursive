@@ -1,7 +1,7 @@
 import fact
 
 
-def anagrams(s):
+def anagrams(self, s):
     if s == "":
         return [s]
     else:
@@ -9,8 +9,4 @@ def anagrams(s):
         for w in anagrams(s[1:]):
             for pos in range(len(w)+1):
                 ans.append(w[:pos]+s[0]+w[pos:])
-    print(fact.fact(len(s)))
     return ans
-
-
-print(anagrams("abc"))
